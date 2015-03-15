@@ -39,6 +39,11 @@ page = Page {
                 templatePath = 'resource://Hfrahmann.Website/Private/Templates/NodeTypes/SecondMenu.html'
                 maximumLevels = 0
             }
+
+            breadcrumb = Breadcrumb
+            breadcrumb {
+                templatePath = 'resource://Hfrahmann.Website/Private/Templates/NodeTypes/Breadcrumb.html'
+            }
         }
         // These are your content areas, you can define as many as you want, just name them and the nodePath.
         content {

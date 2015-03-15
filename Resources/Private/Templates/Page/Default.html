@@ -32,6 +32,11 @@
                 </nav>
             </div>
         </header>
+        <f:comment>
+            <div class="hf-container">
+                {parts.breadcrumb -> f:format.raw()}
+            </div>
+        </f:comment>
         <div class="hf-content">
             {content.main -> f:format.raw()}
         </div>

@@ -65,7 +65,7 @@ div.hf-footer {
 }
 
 div.hf-content {
-    margin-top: 50px;
+    margin-top: 25px;
     min-height: 600px;
     line-height: 130%;
 }
@@ -229,6 +229,7 @@ header nav.hf-navigation {
 @media only screen and (min-width: 768px) {
     header nav.hf-navigation {
         display: inline-block !important;
+        margin-top: 15px;
     }
 }
 
@@ -423,3 +424,41 @@ ul {
     padding: 5px;
     overflow: auto;
 }
+
+/***/
+
+ul.breadcrumbs {
+    display: block;
+    list-style-type: none;
+    padding: 10px 0px;
+    margin: 5px;
+}
+
+ul.breadcrumbs > li {
+    display: inline;
+    color: #676767;
+    font-size: 14px;
+}
+
+ul.breadcrumbs > li a {
+    text-decoration: none;
+    color: #676767;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+ul.breadcrumbs > li a:hover {
+    color: #323232;
+    text-decoration: none;
+}
+
+span.splitter:before {
+    position: relative;
+    top: -1px;
+    content: "\203A";
+    font-size: 18px;
+    height: 18px;
+    width: 15px;
+    display: inline-block;
+}
+
