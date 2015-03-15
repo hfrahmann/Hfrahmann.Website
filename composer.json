@@ -1,0 +1,15 @@
+{
+    "name": "hfrahmann/website",
+    "type": "typo3-flow-site",
+    "description": "Add description here",
+    "require": {
+        "typo3/neos": "*",
+        "typo3/neos-nodetypes": "*",
+        "geshi/geshi": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Hfrahmann\\Website": "Classes"
+        }
+    }
+}

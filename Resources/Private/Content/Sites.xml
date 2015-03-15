@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <site nodeName="website" type="TYPO3.Neos.NodeTypes:Page">
+        <properties>
+            <name>Hfrahmann</name>
+            <title><![CDATA[Home]]></title>
+            <state>1</state>
+            <siteResourcesPackageKey>Hfrahmann.Website</siteResourcesPackageKey>
+        </properties>
+        <node type="TYPO3.Neos:ContentCollection" nodeName="footer">
+            <node type="TYPO3.Neos.NodeTypes:Text" nodeName="textFooter">
+                <properties>
+                    <text><![CDATA[<p>This is the footer</p>]]></text>
+                </properties>
+            </node>
+        </node>
+        <node type="TYPO3.Neos:ContentCollection" nodeName="main">
+            <node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">
+                <properties>
+                    <text><![CDATA[<p>This is the homepage</p>]]></text>
+                </properties>
+            </node>
+        </node>
+    </site>
+</root>

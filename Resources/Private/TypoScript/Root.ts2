@@ -1,0 +1,61 @@
+/**
+* Root TypoScript template for the Free Veggie site
+*/
+
+include: NodeTypes/*
+
+page = Page {
+    head {
+        stylesheets.site = TYPO3.TypoScript:Template {
+            templatePath = 'resource://Hfrahmann.Website/Private/Templates/Page/Default.html'
+            sectionName = 'stylesheets'
+        }
+        javascripts.site = TYPO3.TypoScript:Template {
+            templatePath = 'resource://Hfrahmann.Website/Private/Templates/Page/Default.html'
+            sectionName = 'headScripts'
+        }
+        metadata = TYPO3.TypoScript:Template {
+            templatePath = 'resource://Hfrahmann.Website/Private/Templates/Page/Default.html'
+            sectionName = 'metadata'
+        }
+    }
+
+    body {
+        templatePath = 'resource://Hfrahmann.Website/Private/Templates/Page/Default.html'
+        sectionName = 'body'
+        parts {
+            title = ${q(node).property('title')}
+
+            mainMenu = Menu
+            mainMenu {
+                entryLevel = 1
+                templatePath = 'resource://Hfrahmann.Website/Private/Templates/NodeTypes/MainMenu.html'
+                maximumLevels = 2
+            }
+
+            secondMenu = Menu
+            secondMenu {
+                entryLevel = 2
+                templatePath = 'resource://Hfrahmann.Website/Private/Templates/NodeTypes/SecondMenu.html'
+                maximumLevels = 0
+            }
+        }
+        // These are your content areas, you can define as many as you want, just name them and the nodePath.
+        content {
+            main = PrimaryContent {
+                nodePath = 'main'
+            }
+
+        }
+
+        footer = ContentCollection {
+            nodePath = ${q(site).children('footer').property('_path')}
+            collection = ${q(site).children('footer').children()}
+        }
+
+        javascripts.site = TYPO3.TypoScript:Template {
+            templatePath = 'resource://Hfrahmann.Website/Private/Templates/Page/Default.html'
+            sectionName = 'bodyScripts'
+        }
+    }
+}

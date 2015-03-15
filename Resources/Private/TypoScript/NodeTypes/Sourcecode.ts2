@@ -1,0 +1,3 @@
+prototype(Hfrahmann.Website:Sourcecode) {
+    attributes.class = 'hf-sourcecode'
+}

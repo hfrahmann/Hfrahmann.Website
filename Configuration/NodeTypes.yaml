@@ -1,0 +1,186 @@
+# If you need more than just the "main" content area you can
+# uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still
+# only those that are rendered in your TypoScript and Template
+# are visible on your page.
+---
+#'TYPO3.Neos.NodeTypes:Page':
+#  childNodes:
+#    sidebar:
+#      type: 'TYPO3.Neos:ContentCollection'
+
+
+'Hfrahmann.Website:Section':
+  superTypes: ['TYPO3.Neos.NodeTypes:Column']
+  ui:
+    label: 'Section'
+    icon: 'icon-th-large'
+    group: 'structure'
+    inspector:
+      groups:
+        'section':
+          label: 'Section'
+          position: 5
+  childNodes:
+    column0:
+      type: 'TYPO3.Neos:ContentCollection'
+  properties:
+    layout: []
+    color:
+      type: string
+      defaultValue: 'section-white'
+      ui:
+        label: 'Container Color'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'section'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              'section-light-gray':
+                label: 'Light Gray'
+              'section-dark-gray':
+                label: 'Dark Gray'
+              'section-blue':
+                label: 'Blue'
+              'section-white':
+                label: 'White'
+
+
+'Hfrahmann.Website:Sourcecode':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    label: 'Source Code'
+    icon: 'icon-code'
+    inspector:
+      groups:
+        'sourcecode':
+          label: 'Source Code'
+          position: 5
+  properties:
+    language:
+      type: string
+      defaultValue: 'text'
+      ui:
+        label: 'Container Color'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'sourcecode'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              'text':
+                label: 'Text'
+              'apache':
+                label: 'Apache'
+              'apt_sources':
+                label: 'apt Sources'
+              'bash':
+                label: 'Bash'
+              'c':
+                label: 'C'
+              'cpp':
+                label: 'C++'
+              'csharp':
+                label: 'C#'
+              'css':
+                label: 'CSS'
+              'email':
+                label: 'Email'
+              'html5':
+                label: 'HTML'
+              'java':
+                label: 'Java'
+              'javascript':
+                label: 'Javascript'
+              'jquery':
+                label: 'jQuery'
+              'mysql':
+                label: 'MySQL'
+              'nginx':
+                label: 'Nginx'
+              'objc':
+                label: 'Objective-C'
+              'php':
+                label: 'PHP'
+              'postgresql':
+                label: 'PostgreSQL'
+              'xml':
+                label: 'XML'
+              'yaml':
+                label: 'YAML'
+    source:
+      type: string
+      ui:
+        label: 'HTML Content'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'sourcecode'
+          editor: 'TYPO3.Neos/Inspector/Editors/CodeEditor'
+          editorOptions:
+            buttonLabel: 'Edit sourcecode'
+      defaultValue: 'Enter Code here'
+
+
+
+
+##
+# Adjust the "TwoColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'FreeVeggie.Blog:TwoColumn':
+  properties:
+    'layout':
+      defaultValue: '50-50'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '50-50':
+                label: '50% / 50%'
+              '25-75':
+                label: '25% / 75%'
+              '75-25':
+                label: '75% / 25%'
+              '66-33':
+                label: '66% / 33%'
+              '33-66':
+                label: '33% / 66%'
+
+##
+# Adjust the "ThreeColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'FreeVeggie.Blog:ThreeColumn':
+  properties:
+    'layout':
+      defaultValue: '33-33-33'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33':
+                label: '33% / 33% / 33%'
+              '50-25-33':
+                label: '50% / 25% / 33%'
+              '25-50-25':
+                label: '25% / 50% / 25%'
+              '25-25-50':
+                label: '25% / 25% / 50%'
+
+##
+# Adjust the "FourColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'FreeVeggie.Blog:FourColumn':
+  properties:
+    'layout':
+      defaultValue: '25-25-25-25'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25':
+                label: '25% / 25% / 25% / 25%'

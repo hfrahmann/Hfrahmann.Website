@@ -1,0 +1,9 @@
+prototype(Hfrahmann.Website:Section) {
+    // give the layout property from the current node to my template as "layout" right side yaml, left side fluid
+    attributes.class = ${q(node).property('color')}
+
+    column0 = TYPO3.Neos:ContentCollection {
+        nodePath = 'column0'
+    }
+
+}
