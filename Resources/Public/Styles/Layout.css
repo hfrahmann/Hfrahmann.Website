@@ -74,6 +74,8 @@ div.hf-container {
     max-width: 990px;
     width:100%;
     margin:0 auto;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 /**/
@@ -360,7 +362,7 @@ header ul.hf-secondmenu-tablet {
 /******/
 
 div.hf-content a {
-    color: #56bdff;
+    color: #3d86b5;
     text-decoration: none;
 }
 
